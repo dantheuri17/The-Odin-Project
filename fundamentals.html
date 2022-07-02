@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+<body>
+    <button> Start Machine </button>
+    <p>The machine is stopped</p>
+    <script>
+        const btn = document.querySelector('button');
+        const txt = document.querySelector('p'); 
+
+        btn.addEventListener('click', updateBtn);
+
+        function updateBtn(){
+            if(btn.textContent === 'Start Machine')
+            {
+                btn.textContent = 'Stop Machine';
+                txt.textContent = 'The machine has started';
+            } else {
+                btn.textContent = 'Start Machine'; 
+                txt.textContent = 'The machine is stopped.';
+            }
+        }
+         
+        
+        const max = 57; 
+        let actual = max - 13; 
+        let percentage = actual / max; 
+
+        let a = prompt("First number?", 1); 
+        let b = prompt("Second number?", 2);
+        alert(+a + +b); 
+        
+
+    </script>
+</body>
+</html>
